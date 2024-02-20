@@ -23,16 +23,8 @@ Quagga.init({
 
 Quagga.onDetected(function (result) {
    console.log("Barcode detected and processed", result);
-
-    // Create a <p> element
-    var pTag = document.createElement('p');
-
-    // Set the text content of the <p> element
-    pTag.textContent = "Barcode detected: " + result.codeResult.code;
-
-    // Append the <p> element to the body or another container element
-    document.body.appendChild(pTag);
-    
-    // Stop further scanning (optional)
+    // Handle the detected barcode data as needed
+    alert("Barcode detected: " + result.codeResult.code);
+    // Stop further scanning
     Quagga.stop();
 });
